@@ -1,6 +1,6 @@
 <?php
-// richiamo la funzione per generare le password presente nel file functions.php:
-require_once './functions.php';
+// Avviamo la sessione:
+session_start();
 
 ?>
 
@@ -29,7 +29,20 @@ require_once './functions.php';
         <form action="./result.php" method="GET" class="class-form d-flex">
             <div class="row col-12">
                 <label for="length_pwd" class="col-6">Lunghezza password:</label>
-                <input type="number" min=1 name="pwd_length" id="length_pwd" class="col-6">
+                <input type="number" min=1 name="pwd_length" id="length_pwd" class="col-6 mb-3">
+
+                <label for="maiuscole">Lettere maiuscole: </label>
+                <input type="checkbox" name="lettere_maiuscole" value="true" checked="true" id="maiuscole" class="mb-3">
+
+                <label for=" minuscole">Lettere minuscole: </label>
+                <input type="checkbox" name="lettere_minuscole" value="true" checked="true" id="minuscole" class="mb-3">
+
+                <label for="simboli">Simboli: </label>
+                <input type="checkbox" name="lettere_simboli" value="true" checked="true" id="simboli" class="mb-3">
+
+                <label for="numeri">Numeri: </label>
+                <input type="checkbox" name="numeri" value="true" checked="true" id="numeri" class="mb-3">
+
                 <button type="submit" class="btn btn-primary my-3">Invia</button>
             </div>
         </form>
