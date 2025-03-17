@@ -14,14 +14,25 @@ h1, h2 {
     text-align: center;
 }
 
+h1.h1-index {
+    color: #7D8B97;
+}
+h2.h2-index {
+    color: white;
+}
+
+.container {
+    background-color: #001731;
+    margin: 100px auto;
+}
+
 form.class-form {
-    display: flex;
     gap: 1em;
-    flex-direction: column;
-    width: 300px;
+    flex-direction: row;
+    width: 500px;
     margin: 20px auto;
     border: 1px solid #333;
-    padding: .8em;
+    padding: 1.8em;
     border-radius: 8px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+    background-color: white;
 }

@@ -20,15 +20,21 @@ require_once './functions.php';
 
 <body>
 
-    <h1>Strong Password Generator</h1>
-    <h2>Genera una password sicura</h2>
+    <div class="container p-3">
 
 
-    <form action="./result.php" method="GET" class="class-form">
-        <label for="length_pwd">Lunghezza password:</label>
-        <input type="number" min=1 name="pwd_length" id="length_pwd">
-        <button type="submit">Invia</button>
-    </form>
+        <h1 class="h1-index">Strong Password Generator</h1>
+        <h2 class="h2-index">Genera una password sicura</h2>
+
+        <form action="./result.php" method="GET" class="class-form d-flex">
+            <div class="row col-12">
+                <label for="length_pwd" class="col-6">Lunghezza password:</label>
+                <input type="number" min=1 name="pwd_length" id="length_pwd" class="col-6">
+                <button type="submit" class="btn btn-primary my-3">Invia</button>
+            </div>
+        </form>
+
+    </div>
 
 </body>
 
