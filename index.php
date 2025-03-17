@@ -1,13 +1,6 @@
 <?php
 // richiamo la funzione per generare le password presente nel file functions.php:
 require_once './functions.php';
-require_once './functions.php';
-require_once './functions.php';
-require_once './functions.php';
-
-/* La funzione isset() verifica se una variabile è definita e non è null
-assegno alla variabile $pwd_lenght il valore 0 se questa non è definita, altrimenti il valore intero (con il casting a int) del parametro $_GET */
-$pwd_lenght = isset($_GET['pwd_length']) ? (int) $_GET['pwd_length'] : 0;
 
 ?>
 
@@ -31,17 +24,12 @@ $pwd_lenght = isset($_GET['pwd_length']) ? (int) $_GET['pwd_length'] : 0;
     <h2>Genera una password sicura</h2>
 
 
-    <form action="./index.php" method="GET" class="class-form">
+    <form action="./result.php" method="GET" class="class-form">
         <label for="length_pwd">Lunghezza password:</label>
         <input type="number" min=1 name="pwd_length" id="length_pwd">
         <button type="submit">Invia</button>
     </form>
 
-    <h3>
-        <?php
-            echo generatePassword($pwd_lenght);
-        ?>
-    </h3>
 </body>
 
 </html>
