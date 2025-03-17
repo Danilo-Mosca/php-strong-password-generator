@@ -1,28 +1,13 @@
 <?php
+// richiamo la funzione per generare le password presente nel file functions.php:
+require_once './functions.php';
+require_once './functions.php';
+require_once './functions.php';
+require_once './functions.php';
 
 /* La funzione isset() verifica se una variabile è definita e non è null
 assegno alla variabile $pwd_lenght il valore 0 se questa non è definita, altrimenti il valore intero (con il casting a int) del parametro $_GET */
 $pwd_lenght = isset($_GET['pwd_length']) ? (int) $_GET['pwd_length'] : 0;
-
-$pwd_char = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ0123456789!@#$%&*?';
-// var_dump($pwd_char);
-// echo strlen($pwd_char);
-
-// Funzione che genera una password con la lunghezza specificata
-function generatePassword (int $pwd_lenght) {
-    $password = "";
-    global $pwd_char;
-    if ($pwd_char == 0 || $pwd_char == null) {
-        return "<h2> Lunghezza password non definita";
-    }
-    else {
-        for ($i = 0; $i < $pwd_lenght; $i++) {
-            $randomNum = rand(0, 63);
-            $password .= $pwd_char[$randomNum];
-        }
-        return $password;
-    }
-}
 
 ?>
 
