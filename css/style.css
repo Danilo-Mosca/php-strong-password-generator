@@ -1,0 +1,27 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classe di debug */
+.debug {
+    border: 1px solid red;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form.class-form {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #333;
+    padding: .8em;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
