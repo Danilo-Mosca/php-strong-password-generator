@@ -1,6 +1,8 @@
 <?php
 // Avviamo la sessione:
 session_start();
+require_once './functions.php';
+verifyAddForm();
 
 ?>
 
@@ -26,7 +28,7 @@ session_start();
         <h1 class="h1-index">Strong Password Generator</h1>
         <h2 class="h2-index">Genera una password sicura</h2>
 
-        <form action="./result.php" method="GET" class="class-form d-flex">
+        <form action="" class="class-form d-flex">
             <div class="row col-12">
                 <label for="length_pwd" class="col-6">Lunghezza password:</label>
                 <input type="number" min=1 name="pwd_length" id="length_pwd" class="col-6 mb-3">
@@ -43,7 +45,7 @@ session_start();
                 <label for="numeri">Numeri: </label>
                 <input type="checkbox" name="numeri" value="true" checked="true" id="numeri" class="mb-3">
 
-                <button type="submit" class="btn btn-primary my-3">Invia</button>
+                <button class="btn btn-primary my-3">Invia</button>
             </div>
         </form>
 
